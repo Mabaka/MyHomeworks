@@ -1,11 +1,9 @@
-<xsl:template match="/">
-  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="xml" encoding="UTF-8"/>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" encoding="UTF-8"/>
+  <xsl:template match="/">
     <math xmlns="http://www.w3.org/1998/Math/MathML">
             <xsl:apply-templates/>
-        </math>
-    </xsl:template>
-
+    </math>
     <xsl:template match="корень">
         <msqrt>
             <xsl:apply-templates select="*" />
@@ -58,5 +56,5 @@
         <msub>
             <xsl:apply-templates select="*" />
         </msub>
-  </xsl:stylesheet>
-</xsl:template>
+  </xsl:template>
+</xsl:stylesheet>
